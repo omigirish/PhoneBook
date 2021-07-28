@@ -1,0 +1,10 @@
+.boundry
+{
+    display: flex;
+    background-color: white;
+    border: 1px lightgrey solid;
+}
+.Name
+{
+    width: 80%;
+}

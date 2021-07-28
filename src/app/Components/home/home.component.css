@@ -1,0 +1,23 @@
+.main
+{
+    background-color: rgba(228, 225, 225, 0.692);
+    margin: 5% 30% 0 30%;
+    padding: 2% 5% 2% 5%;
+}
+
+.header
+{
+/* padding: 10px 0 10px 0; */
+text-align: center;
+}
+
+.scrollable
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 50vh;
+}
+
+.scrollable::-webkit-scrollbar {
+    display: none;
+  }

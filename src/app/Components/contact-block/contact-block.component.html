@@ -1,0 +1,32 @@
+<div class="boundry">
+    <div class="Name">
+        <p>  {{contactName}} </p> 
+        <p  >  <i  class="material-icons small" ></i> {{phoneNo}}</p>
+    </div>
+
+    <button [attr.data-target]="id" class="btn modal-trigger"><i class="material-icons medium">edit</i></button>
+    <button (click)="deleteContact()"><i class="material-icons medium">delete</i></button>
+  
+</div>
+
+
+
+<!-- Modal Structure For Update -->
+<div id={{id}} class="modal">
+  <form [formGroup]="updateForm" (ngSubmit)= "onUpdate()" >
+    <div class="modal-content">
+      <h4>Update Contact</h4>
+      <label for="editname" >Edit Name</label>
+      <input type="text"  placeholder= {{contactName}} name="editname" formControlName="contactName">
+      <label for="editNumber" >Edit Number</label>
+      <input type="text"  placeholder = {{phoneNo}} name="editNumber" formControlName="phoneNo">
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="modal-close waves-effect waves-green btn-flat">Update Contact</button>
+    </div>
+  </form>
+  </div>
+
+
+  
+

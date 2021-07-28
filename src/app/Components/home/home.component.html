@@ -1,0 +1,38 @@
+<div class="main">
+    <div class ="header"> 
+        <h3>   <i class="material-icons medium">contacts</i> Phone Book App</h3>
+    </div>
+    <h3>   Contacts </h3>
+    <div class="input-field col s6">
+        <i class="material-icons prefix">search</i>
+        <input placeholder="Search For Contact By Name" id="first_name" type="text" (input)="onSearch()" [(ngModel)]="searchFieldText">
+    </div>
+    <div class="scrollable"> 
+    <div  *ngFor="let c of contactList" >
+      <contact-block *ngIf="!c.hidden" id={{c.id}} contactName={{c.contactName}} phoneNo={{c.phoneNo}}></contact-block>
+    </div>
+  </div>
+  <i class="fas fa-address-book"></i>
+  <a data-target="modal2" class="btn-floating btn-large waves-effect waves-light red modal-trigger"><i class="material-icons">add</i></a>
+
+  </div>
+
+
+
+
+<!-- Modal Structure For Insert -->
+<div id="modal2" class="modal">
+    <form [formGroup]="newContactForm" (ngSubmit)= "onSubmit()" >
+    <div class="modal-content">
+      <h4>Add New Contact</h4>
+        <input type="text" placeholder="Enter Contact Name"  name="editname" formControlName="contactName">
+        <input type="text" placeholder="Enter Phone Number" name="editNumber" formControlName="phoneNo">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="modal-close waves-effect waves-green btn-flat">Add Contact</button>
+      </div>
+      </form>
+</div>
+  
+  
+
