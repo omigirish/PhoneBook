@@ -9,6 +9,9 @@ import { ContactService } from './Services/contact.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
+// Trying Git Integration of VS Code
+
 @NgModule({
   declarations: [
     AppComponent,
